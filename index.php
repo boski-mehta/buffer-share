@@ -23,11 +23,11 @@ if($select_store1->pg_num_rows > 0){
 $data = pg_fetch_assoc($select_store1);
 echo $access_token= $data['access_token'];
 }
-//else {
+else {
 $access_token = shopify\access_token($_REQUEST['shop'], SHOPIFY_APP_API_KEY, SHOPIFY_APP_SHARED_SECRET, $_REQUEST['code']);
-/* $insert_data = "insert into store_info(store_url,access_token) values('$_REQUEST['shop']','$access_token')";
-$ret = pg_query($dbconn4, $insert_data); */
-//}
+ $insert_data = "insert into store_info(store_url,access_token) values('$shop_url','$access_token')";
+$ret = pg_query($dbconn4, $insert_data); 
+}
 require __DIR__.'/smart_collection.php'; //create smart collection
 
 ?>
