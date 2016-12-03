@@ -16,11 +16,11 @@ if((isset($_REQUEST['shop'])) && (isset($_REQUEST['code'])) && $_REQUEST['shop']
 	$_SESSION['code']=$_REQUEST['code'];
 }
 $shop_url=$_REQUEST['shop'];
-$select_store = pg_query($db,"SELECT access_token FROM store_info WHERE store_url = '$shop_url'"); 
-$select_store1 = pg_query($dbconn4, $select_store);
+$select_store = pg_query($dbconn4,"SELECT access_token FROM store_info WHERE store_url = '$shop_url'"); 
+//$select_store1 = pg_query($dbconn4, $select_store);
 //check if the store exists
-if($select_store1->pg_num_rows > 0){
-$data = pg_fetch_assoc($select_store1);
+if($select_store->pg_num_rows > 0){
+$data = pg_fetch_assoc($select_store);
 echo $access_token= $data['access_token'];
 }
 else {
