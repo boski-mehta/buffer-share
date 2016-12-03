@@ -20,7 +20,7 @@ if((isset($_REQUEST['shop'])) && (isset($_REQUEST['code'])) && $_REQUEST['shop']
 //$select_store1 = pg_query($dbconn4, $select_store);
 //check if the store exists
 
-if($select_store && $select_store->pg_num_rows > 0){
+if($select_store ){
 $data = pg_fetch_assoc($select_store);
 echo $access_token= $data['access_token'];
 }
