@@ -1,7 +1,7 @@
 <?php
        
-	define('SHOPIFY_APP_API_KEY', '917505b6882e263ca3563170982a8a0f');
-	define('SHOPIFY_APP_SHARED_SECRET', 'bd392344caf56ce075f44a18fbc099c8');
+	define('SHOPIFY_APP_API_KEY', 'd6e9f3bc4ba6ab7b072fb63d3039f435');
+	define('SHOPIFY_APP_SHARED_SECRET', '6d705e3c053e64d75e334d392ead4345');
 	
 ?>
 
