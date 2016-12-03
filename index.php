@@ -18,7 +18,8 @@ if((isset($_REQUEST['shop'])) && (isset($_REQUEST['code'])) && $_REQUEST['shop']
 $access_token = shopify\access_token($_REQUEST['shop'], SHOPIFY_APP_API_KEY, SHOPIFY_APP_SHARED_SECRET, $_REQUEST['code']);
 
 require __DIR__.'/smart_collection.php'; //create smart collection
-
+$sql = "insert into store_info(store_url,access_token) values('www.stare.com','sdfdsafda')";
+$ret = pg_query($dbconn4, $sql);
 ?>
 
 <head>
