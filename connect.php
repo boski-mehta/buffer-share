@@ -1,8 +1,8 @@
 <?php 
 session_start();
 require('buffer.php'); 
-$client_id = '583ebbae0d684f7d4c754055';
-	$client_secret = '674004b6c073f97c7159d7ac7ec4b227';
+$client_id = '584268ab6257b56f05ff2da5';
+	$client_secret = '304f258d69369b46b9c4fe10580b8ab2';
 	$callback_url = 'https://buffer-share.herokuapp.com/';
 
 $buffer = new BufferApp($client_id, $client_secret, $callback_url);
